@@ -8,6 +8,7 @@ interface Props {}
 export default function DashboardTemplate({}: Props) { 
     
     const [userCount, setUserCount] = useState(0);
+    const [eventCount, setEventsCount] = useState(0);
     const [error, setError] = useState<string | null>(null);
     const [load, setLoad] = useState(false);
 
@@ -18,6 +19,7 @@ export default function DashboardTemplate({}: Props) {
             if(response === false) return setError(`error.global`);
             // setUserCount();
             setUserCount(response.users_count);
+            setEventsCount(response.events_count);
             setError(null);
             return setLoad(false);
         }
@@ -31,6 +33,7 @@ export default function DashboardTemplate({}: Props) {
                 { error && <>error temporal</> }
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     <CardDashboard description={`${userCount}`} path="/users" title="Usuarios" dark />
+                    <CardDashboard description={`${eventCount}`} path="/event" title="Eventos" />
                 </div>
             </div>
         </GlobalLayout>

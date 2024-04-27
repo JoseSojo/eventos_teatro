@@ -25,11 +25,13 @@ export default function SlideLeft({icon}: Props) {
                 ? <ul className="grid">
                     <LinkTo customClass={`${location == `/dashboard` ? `${clsItemActive}` : `${clsItem}` } rounded-tr-3xl text-center`} path="/dashboard" text={<Image alt="" customClass={clsIco} path="/home.svg" />} />
                     <LinkTo customClass={`${location == `/profile` ? `${clsItemActive}` : `${clsItem}` }`} path="/profile" text={<Image alt="" customClass={clsIco} path="/user.svg" />} />
+                    <LinkTo customClass={`${location == `/event` ? `${clsItemActive}` : `${clsItem}` }`} path="/event" text={<Image alt="" customClass={clsIco} path="/desktop.svg" />} />
                     {(ROL == `ADMIN` || ROL == `SUPERADMIN`) && <LinkTo customClass={`${location == `/users` ? `${clsItemActive}` : `${clsItem}` }`} path="/users" text={<Image alt="" customClass={clsIco} path="/groups.svg" />} /> }
                 </ul>
                 : <ul className="grid">
                     <LinkTo customClass={`rounded-tr-3xl ${location == `/dashboard` ? `${clsItemActive} grid-cols-2` : `${clsItem} grid-cols-2` }`} path="/dashboard" text={<><Image alt="" customClass={clsIco} path="/home.svg" /> inicio</>} />
                     <LinkTo customClass={`${location == `/profile` ? `${clsItemActive} grid-cols-2` : `${clsItem}` } grid-cols-2`} path="/profile" text={<><Image alt="" customClass={clsIco} path="/user.svg" /> perfil</>} />
+                    <LinkTo customClass={`${location == `/event` ? `${clsItemActive} grid-cols-2` : `${clsItem}` } grid-cols-2`} path="/event" text={<><Image alt="" customClass={clsIco} path="/desktop.svg" /> eventos</>} />
                     {(ROL == `ADMIN` || ROL == `SUPERADMIN`) && <LinkTo customClass={`${location == `/users` ? `${clsItemActive} grid-cols-2` : `${clsItem} grid-cols-2` }`} path="/users" text={<><Image alt="" customClass={clsIco} path="/groups.svg" /> usuarios</>} /> }
                 </ul>
             }

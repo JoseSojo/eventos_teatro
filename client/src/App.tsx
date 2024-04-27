@@ -6,6 +6,9 @@ import DashboardTemplate from "./UI/templates/DashboardTemplate";
 import LogoutTemplate from "./UI/templates/LogoutTemplate";
 import Notification from "./UI/organims/Notification";
 import UserTemplate from "./UI/templates/UserTemplate";
+import EventTemplate from "./UI/templates/EventTemplate";
+import NewEventTemplate from "./UI/templates/NewEventTemplate";
+import ViewEvent from "./UI/templates/ViewEvent";
 
 function App() {
 
@@ -20,6 +23,9 @@ function App() {
         <Route path="/logout" component={LogoutTemplate} />
         <Route path="/dashboard" component={DashboardTemplate} />
         <Route path="/users" component={UserTemplate} />
+        <Route path="/event" component={EventTemplate} />
+        <Route path="/event/new" component={NewEventTemplate} />
+        <Route path="/event/:id" component={ViewEvent} />
         <Route path="/" component={auth.session ? DashboardTemplate : LoginTemplate} />    
       </Switch>
     </>

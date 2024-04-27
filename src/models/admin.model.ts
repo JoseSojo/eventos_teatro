@@ -1,3 +1,4 @@
+import eventSchema from "../schema/event.schema";
 import userSchema from "../schema/user.schema"
 
 export const GetAllUsers = async () => {
@@ -16,6 +17,10 @@ export const DeleteViewUser = async ({id}:{id:string}) => {
 
 export const GetCounts = async () => {
     const users = await userSchema.find({ delete_at: undefined }).countDocuments();
+    const evetns = await eventSchema.find({ delete_at: undefined }).countDocuments();
     // const usersDelete = await userSchema.find({ delete_at: !undefined }).countDocuments();
-    return {users_count:users}; 
+    return {
+        users_count:users,
+        events_count: evetns
+    }; 
 }

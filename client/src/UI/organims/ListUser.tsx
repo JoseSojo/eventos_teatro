@@ -117,7 +117,7 @@ export default function ListUser({}: Props) {
                     </div>
                     : <>{
                         users.length <= 0 
-                        ? <Paragrap customClass="text-center mt-5 text-xl text-gray-700 font-light" text="cargando usuarios..." />
+                        ? <Paragrap customClass="text-center mt-5 text-xl text-gray-700 font-light" text="No tienes usuarios" />
                         : <div>
                             <div className="grid grid-cols-4 border place-items-center">
                                 <span className="py-2">rol</span>

@@ -35,5 +35,6 @@ export interface DataFile extends CreateFile {
 }
 
 export interface CountAll {
-    users_count: number
+    users_count: number,
+    events_count: number
 }

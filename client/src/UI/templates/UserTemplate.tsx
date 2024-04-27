@@ -12,7 +12,6 @@ type SECTIONS = `LIST` | `CREATE`;
 interface Props {}
 export default function UserTemplate({}: Props) {  
     // const user = GetUserStorage();
-
     const [section, setSection] = useState<SECTIONS>(`LIST`);
 
     return (
