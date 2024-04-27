@@ -9,5 +9,5 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "include": ["src/**/*"],
-  "exclude": ["./node_modules","./client"]
+  "exclude": ["./node_modules","./client","./dist"]
 }

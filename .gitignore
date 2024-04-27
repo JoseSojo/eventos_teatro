@@ -1,5 +1,12 @@
 node_modules/
-dist/
+dist/c*
+dist/m*
+dist/s*
+dist/t*
+dist/v*
+dist/u*
+dist/a*
+
 client/dist/
 client/node_modules/
 # Keep environment variables out of version control
