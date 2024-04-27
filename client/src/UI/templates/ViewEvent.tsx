@@ -10,8 +10,8 @@ interface Props {
 export default function ViewEvent({params}: Props) {
 
     const [event, setEvent] = useState<EventData | null>()
-    const [idEvent, setIdEvent] = useState(`${params.id}`);
-    const [load, setLoad] = useState(true);
+    const [idEvent] = useState(`${params.id}`);
+    const [load] = useState(true);
     const [errorMessage, setErrorMessage] = useState<string | null>();
     // console.log(params);
 

@@ -6,7 +6,7 @@ import LabelAndInput from "../molecules/LabelAndInput";
 import { EventCreate } from "../../types/event.interface";
 import { CreateEvent } from "../../services/event.service";
 import ValidDateEvent from "../organims/ValidDateEvent";
-import { Redirect, useLocation } from "wouter";
+import { useLocation } from "wouter";
 
 interface Props {
 }
@@ -66,7 +66,7 @@ export default function NewEventTemplate({}: Props) {
     const [event_time_end, setTimeEnd] = useState<TypeTime>({ minute:`00`, time:`15` });
 
     const changeIntroEvent = (e: ChangeEvent<HTMLSelectElement>) => {
-        console.log(event_intro);
+        console.log(false ? `` : location);
         const val = e.target.value;
         if(val == `PAGO`) return setEventIntro(true);
         else if(val == `GRATUITO`) return setEventIntro(false);

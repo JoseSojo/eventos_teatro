@@ -1,2 +1,2 @@
 
-export const BACKEND = `http://localhost:3005`;
+export const BACKEND = `https://eventos-teatro-1.onrender.com`;

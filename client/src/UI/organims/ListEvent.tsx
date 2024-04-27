@@ -14,9 +14,9 @@ export default function ListEvent({}: Props) {
     const [events, setEvetns] = useState<EventData[] | null>(null);
     const [error, setError] = useState<string | null>();
     const [load, setLoad] = useState(true);
-    const [update, setUpdate] = useState(false);
+    const [update] = useState(false);
     const [show, setShow] = useState<EventData | null>(null);
-    const [deleteEvent, setDeleteEvent] = useState(false);
+    // const [deleteEvent, setDeleteEvent] = useState(false);
 
     useEffect(() => {
         const ExecuteRequets = async () => {

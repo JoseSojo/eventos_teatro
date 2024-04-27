@@ -1,6 +1,5 @@
 import { CompleteEvent, DropEvent, ProcessEvent, ReviseEvent } from "../../services/event.service"
-import Button from "../atoms/Button"
-import Image from "../atoms/Image"
+import Button from "../atoms/Button";
 
 interface Props {
     id: string,
