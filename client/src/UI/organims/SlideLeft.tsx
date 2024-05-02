@@ -20,6 +20,11 @@ export default function SlideLeft({icon}: Props) {
 
     return (
         <div className="bg-indigo-400 h-full lg:rounded-tr-3xl ">
+            
+            <div className="">
+                <Image alt="logo teatro" customClass="w-full h-auto object-cover" path="/teatro.png" />
+            </div>
+
             {
                 icon
                 ? <ul className="grid">

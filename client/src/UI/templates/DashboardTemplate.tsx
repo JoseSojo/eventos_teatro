@@ -32,6 +32,7 @@ export default function DashboardTemplate({}: Props) {
                 { load && <>cargando...</> }
                 { error && <>error temporal</> }
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
                     <CardDashboard description={`${userCount}`} path="/users" title="Usuarios" dark />
                     <CardDashboard description={`${eventCount}`} path="/event" title="Eventos" />
                 </div>

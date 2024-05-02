@@ -9,6 +9,7 @@ import UserTemplate from "./UI/templates/UserTemplate";
 import EventTemplate from "./UI/templates/EventTemplate";
 import NewEventTemplate from "./UI/templates/NewEventTemplate";
 import ViewEvent from "./UI/templates/ViewEvent";
+import IndexTemplate from "./UI/templates/IndexTemplate";
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
     <>
       <Notification />
       <Switch>
-        { !auth.session && <Route path="/" component={LoginTemplate} /> }
+        {/* { !auth.session && <Route path="/" component={LoginTemplate} /> } */}
+        <Route path="/login" component={auth.session ? DashboardTemplate : LoginTemplate} />
         <Route path="/profile" component={ProfileTemplate} />
         <Route path="/logout" component={LogoutTemplate} />
         <Route path="/dashboard" component={DashboardTemplate} />
@@ -26,7 +28,7 @@ function App() {
         <Route path="/event" component={EventTemplate} />
         <Route path="/event/new" component={NewEventTemplate} />
         <Route path="/event/:id" component={ViewEvent} />
-        <Route path="/" component={auth.session ? DashboardTemplate : LoginTemplate} />    
+        <Route path="/" component={auth.session ? DashboardTemplate : IndexTemplate} />    
       </Switch>
     </>
   )

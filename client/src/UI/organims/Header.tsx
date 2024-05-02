@@ -19,7 +19,7 @@ export default function Header ({setSlide, slide}: Props) {
                     <button className="px-5 py-2 rounded-md bg-indigo-300 hover:bg-indigo-400 outline-none" onClick={()=> setSlide(!slide)}>
                         <Image alt="" customClass="w-[20px] h-[20px]" path="/main.svg" />
                     </button>
-                    <Title customClass="text-2xl font-light text-gray-700" text="SitemBase" />
+                    <Title customClass="text-2xl font-light text-gray-700" text="Teatro Simón Bolivar" />
                 </div>
 
                 <nav className="flex pr-4 gap-6">

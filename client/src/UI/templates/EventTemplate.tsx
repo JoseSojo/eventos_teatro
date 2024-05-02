@@ -4,7 +4,7 @@ import ListEvent from "../organims/ListEvent";
 
 interface Props {}
 export default function EventTemplate({}: Props) { 
-    
+
     return (
         <GlobalLayout>
             <div className="grid grid-rows-[auto_1fr] w-full h-full px-5 gap-5">
@@ -21,6 +21,9 @@ export default function EventTemplate({}: Props) {
                     </div>
 
                 </div>
+
+
+
                 <ListEvent />
             </div>
         </GlobalLayout>
